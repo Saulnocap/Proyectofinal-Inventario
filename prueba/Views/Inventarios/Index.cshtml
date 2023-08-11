@@ -4,8 +4,9 @@
     ViewData["Title"] = "Productos";
 }
 
-<h1 style="text-align:center;">Productos</h1>
-
+<div class="container text-center">
+    <p>Productos</p>
+</div>
 
 <form asp-controller="Inventarios" asp-action="Index">
     <p>
@@ -15,6 +16,7 @@
         <a asp-action="Create" class="btn btn-sm btn-success">Agregar producto</a>
     </p>
 </form>
+
 <table class="table">
     <thead>
         <tr>
