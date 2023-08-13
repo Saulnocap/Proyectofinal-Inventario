@@ -1,19 +1,21 @@
 ﻿@model prueba.Models.Inventario
 
 @{
-    ViewData["Title"] = "Editar";
+    ViewData["Title"] = "Agregar";
 }
 
-<div class="container p-1">
-    <p class="text-center h1">Editar</p>
-    <p class="text-center h4">Producto</p>
-</div>
+<d
 
-<div class="row">
-    <div class="mx-auto col-8 col-md-8 col-lg-6">
-        <form asp-action="Edit">
+<h1 style="text-align:center;">Agregar</h1>
+
+<h4 style="text-align:center;">Producto</h4>
+<hr />
+<div style="margin-left:430px; margin-right:-500px;">
+    
+  <div class="row" >
+    <div class="col-md-4">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
                 <input asp-for="Nombre" class="form-control" />
@@ -40,7 +42,7 @@
                 <span asp-validation-for="Fecha" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MovType" class="control-label">Tipo de Movimiento</label>
+                <label asp-for="MovType" class="control-label">Tipo de movimiento</label>
                 <input asp-for="MovType" class="form-control" />
                 <span asp-validation-for="MovType" class="text-danger"></span>
             </div>
@@ -49,14 +51,14 @@
                 <input asp-for="ProvCode" class="form-control" />
                 <span asp-validation-for="ProvCode" class="text-danger"></span>
             </div>
-            <div class="form-group p-2">
-                <input type="submit" value="Guardar" class="btn btn-primary text-white text-uppercase" />
-                <a asp-action="Index" class="btn btn-info text-white text-uppercase">Volver a la lista</a>
+            <div class="form-group" style="margin-top:20px;">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-info">Volver a la lista</a>
             </div>
         </form>
     </div>
+  </div>
 </div>
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
